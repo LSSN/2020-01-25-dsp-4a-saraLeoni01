@@ -1,0 +1,4 @@
+//La sintesi sottrattiva è un procedimento di sintesi di un suono che ricorendo all'utilizzo di filtri da più complesso arriva ad essere un suono più semplice.
+import("stdfaust.lib");
+gain = vslider("gain", 0, 0, 1, 0.1);
+process = no.noise : fi.lowpass(4,6000) : fi.highpass(4,6000);
